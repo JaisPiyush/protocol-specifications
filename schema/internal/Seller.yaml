@@ -1,0 +1,44 @@
+description: Describes the catalog of a business. 
+type: object
+properties:
+  id:
+    type: string
+    description: Id of the provider
+  descriptor:
+    $ref: "../Descriptor.yaml"
+  category_id:
+    type: string
+    description: Category Id of the provider at the BPP-level catalog
+  rating:
+    $ref: "../Rating.yaml#/properties/value"
+  time:
+    $ref: "../Time.yaml"
+  is_store_active:
+    type: boolean
+    description: Mark the active status of store.
+  uid:
+    type: string
+    description: Unique user id managing the seller store.
+  categories:
+    type: array
+    items:
+      $ref: "../Category.yaml"
+  payments:
+    type: array
+    items:
+      $ref: "../Payment.yaml"
+  locations:
+    type: array
+    items:
+      $ref: "../Location.yaml"
+  offers:
+    type: array
+    items:
+      $ref: "../Offer.yaml"
+  rateable:
+    description: Whether this provider can be rated or not
+    type: boolean
+  tags:
+    type: array
+    items:
+      $ref: "../TagGroup.yaml"

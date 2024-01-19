@@ -1,0 +1,16 @@
+type: object
+required:
+    - descriptor
+    - time 
+    - locations 
+    - tags
+properties:
+    descriptor:
+        $ref: "../../../../schema/internal/Seller.yaml#/properties/descriptor"
+    time:
+        $ref: "../../../../schema/internal/Seller.yaml#/properties/time"
+    locations:
+        $ref: "../../../../schema/internal/Seller.yaml#/properties/locations"
+    tags:
+        $ref: "../../../../schema/internal/Seller.yaml#/properties/tags"
+    

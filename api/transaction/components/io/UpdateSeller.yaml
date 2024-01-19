@@ -1,0 +1,18 @@
+description: Describes the catalog of a business. 
+type: object
+properties:
+  descriptor:
+    $ref: "../../../../schema/internal/Seller.yaml#/properties/descriptor"
+  time:
+    $ref: "../../../../schema/internal/Seller.yaml#/properties/time"
+  is_store_active:
+    type: boolean
+    description: Mark the active status of store.
+  locations:
+    type: array
+    items:
+      $ref: "../../../../schema/internal/Seller.yaml#/properties/locations"
+  tags:
+    type: array
+    items:
+      $ref: "../../../../schema/internal/Seller.yaml#/properties/tags"
