@@ -1,0 +1,48 @@
+description: Describes the repsonse returned by vision product search.
+type: array
+items:
+    type: object
+    required:
+        - bounding_poly
+        - results
+    properties:
+        bounding_poly:
+            type: object
+            required:
+                - vertices
+            properties:
+                vertices:
+                    type: array
+                    items:
+                        type: object
+                        required:
+                            - x
+                            - y
+                        properties:
+                            x:
+                                type: number
+                                format: float
+                            y:
+                                type: number
+                                format: float
+        results:
+            type: array
+            items:
+                type: object 
+                required:
+                    - id
+                    - name
+                    - score
+                    - image
+                properties:
+                    id:
+                        type: string
+                    name:
+                        type: string
+                    score:
+                        type: number
+                        format: double
+                    image:
+                        type: string
+                        
+                        

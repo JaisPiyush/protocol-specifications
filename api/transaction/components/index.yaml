@@ -75,7 +75,50 @@ paths:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/SuccessfulAckResponse"
-                            
+    /search/item/vision/global:
+        description: Search products from the global product database using Google Cloud Vision API.
+        post:
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/VisionProductSearchRequest"
+            responses:
+                '200':
+                    description: Describes the vision search response
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "./io/VisionProductSearchResponse.yaml"
+                '400':
+                    description: Unknown error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "../../../schema/Error.yaml"
+    /search/item/vision/catalog:
+        description: Search products from the sellers catalog using Google Cloud Vision API. 
+        post: 
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/VisionProductSearchRequest"
+            responses:
+                '200':
+                    description: Describes the vision search response
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "./io/VisionProductSearchResponse.yaml"
+                '400':
+                    description: Unknown error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "../../../schema/Error.yaml"
+                
+        
                                 
 
         
@@ -98,4 +141,18 @@ components:
           success:
             type: boolean
             default: true
+    VisionProductSearchRequest:
+        type: object
+        required:
+            - image
+        properties:
+            image:
+                type: string
+                description: base64 encoded image
+            max_results:
+                type: number
+                format: int32
+                default: 5
+            filter:
+                type: string
 

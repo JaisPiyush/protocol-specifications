@@ -37,6 +37,7 @@ files[] = {"path":"api/transaction/components/io/Support.yaml","metaData":{}}
 files[] = {"path":"api/transaction/components/io/Track.yaml","metaData":{}}
 files[] = {"path":"api/transaction/components/io/Update.yaml","metaData":{}}
 files[] = {"path":"api/transaction/components/io/UpdateSeller.yaml","metaData":{}}
+files[] = {"path":"api/transaction/components/io/VisionProductSearchResponse.yaml","metaData":{}}
 files[] = {"path":"api/transaction/components/schema/index.yaml","metaData":{}}
 files[] = {"path":"schema/Ack.yaml","metaData":{}}
 files[] = {"path":"schema/AddOn.yaml","metaData":{}}
